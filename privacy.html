@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | College Complaints</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+  <script src="public/js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">College Complaints</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="teachers.html">Subject Teachers</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="surroundings.html">Campus</a>
+      <a href="complant.html">Complaint</a>
+      <a href="admin-login.html">Login</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <main class="page-shell">
+    <section class="section-heading card-glass">
+      <p class="eyebrow">Privacy Assurance</p>
+      <h1>Privacy Policy</h1>
+      <p>Learn how your personal details, complaints, and student records are handled.</p>
+    </section>
+
+    <section class="card-glass form-panel">
+      <h2>1. Local Storage Architecture</h2>
+      <p>The College Complaint & Feedback System runs entirely inside your web browser. All data you submit—including
+        your login details, passwords, text of complaints, and resolved items—is written directly to your browser's
+        local sandbox (<code>localStorage</code> and <code>sessionStorage</code>).</p>
+      <p><strong>Crucially, no remote server or external database receives or monitors this information.</strong> This
+        ensures absolute student privacy; your data never leaves your personal device.</p>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0;" />
+
+      <h2>2. Data Collection & Usage</h2>
+      <p>The system stores minimal parameters strictly to facilitate the application's feedback routing mechanisms:</p>
+      <ul style="padding-left: 1.5rem; line-height: 1.75; display: grid; gap: 0.5rem;">
+        <li><strong>Account Authentication:</strong> Student USNs and passwords are kept in local storage to simulate
+          verification and enable personalized history tracking.</li>
+        <li><strong>Submissions:</strong> Feedback categories, targets (faculty, hostels, surroundings), titles,
+          messages, and timestamps.</li>
+        <li><strong>Theme Preferences:</strong> Dark/light mode settings are stored to ensure styling stays consistent
+          across visits.</li>
+      </ul>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0;" />
+
+      <h2>3. Clearing Data</h2>
+      <p>Since your files are local, you have full control over them. You can delete all accounts, complaints, and
+        preferences instantly by doing any of the following:</p>
+      <ul style="padding-left: 1.5rem; line-height: 1.75; display: grid; gap: 0.5rem;">
+        <li>Clearing your web browser history/cookies (specifically choosing "Cookies and site data").</li>
+        <li>Opening browser inspector consoles and executing <code>localStorage.clear()</code>.</li>
+        <li>Uninstalling or resetting the web browser application.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <strong>College Complaints</strong>
+        <p>Secure campus feedback platform for students and staff.</p>
+      </div>
+      <div>
+        <strong>Resources</strong>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teachers.html">Subject Teachers</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="surroundings.html">Campus Environment</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Legal & Policy</strong>
+        <ul class="footer-links">
+          <li><a href="privacy.html" style="font-weight: 700; color: var(--primary);">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Made by</strong>
+        <p class="footer-author">Shreyas Kulkarni</p>
+        <p>© 2026 College Complaints. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-note">
+
+    </div>
+  </footer>
+</body>
+
+</html>

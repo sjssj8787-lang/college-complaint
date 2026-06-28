@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaint Portal | College Complaints</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+  <script src="public/js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">College Complaints</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="teachers.html">Subject Teachers</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="surroundings.html">Campus</a>
+      <a href="complant.html">Complaint</a>
+      <a href="admin-login.html">Login</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <main class="page-shell">
+
+
+    <section class="form-panel card-glass complaint-portal" id="complaintPage">
+      <div class="tab-buttons">
+        <button type="button" class="tab-button active" data-platform="College"
+          onclick="setComplaintPlatform('College')">College</button>
+        <button type="button" class="tab-button" data-platform="Hostel"
+          onclick="setComplaintPlatform('Hostel')">Hostel</button>
+      </div>
+      <div class="platform-tag">Platform: <strong id="platformLabel">College</strong></div>
+
+      <form id="publicReportForm" onsubmit="handlePublicSubmit(event)">
+        <input type="hidden" id="reportType" value="Complaint" />
+        <input type="hidden" id="reportPlatform" value="College" />
+
+
+
+        <div class="tab-content active" data-platform="College">
+          <label>Report category</label>
+          <select id="publicTarget" required>
+            <option value="">Choose a college issue</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Campus">Campus</option>
+            <option value="Subject Teacher">Subject Teacher</option>
+          </select>
+        </div>
+
+        <div id="publicTargetDetailContainer" class="form-group" style="display: none; margin-top: 1rem;">
+          <label id="publicTargetDetailLabel">Select Detail</label>
+          <select id="publicTargetDetail" disabled></select>
+        </div>
+
+        <div class="tab-content" data-platform="Hostel">
+          <label>Report category</label>
+          <select id="publicTargetHostel" class="hostel-target" disabled>
+            <option value="">Choose a hostel issue</option>
+            <option value="Mess">Mess</option>
+            <option value="Room">Room</option>
+            <option value="Security">Security</option>
+            <option value="Maintenance">Maintenance</option>
+          </select>
+        </div>
+
+        <label>Subject</label>
+        <input type="text" id="publicSubject" placeholder="Enter the subject or issue" required />
+
+        <label>Report</label>
+        <textarea id="publicMessage" placeholder="Describe your complaint clearly and concisely" required></textarea>
+
+        <button type="submit" class="button primary">Submit report</button>
+      </form>
+
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <strong>College Complaints</strong>
+        <p>staff,hostel,campus feedback platform.</p>
+      </div>
+      <div>
+        <strong>Resources</strong>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teachers.html">Subject Teachers</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="surroundings.html">Campus Environment</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Legal & Policy</strong>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Made by</strong>
+        <p class="footer-author">Shreyas Kulkarni</p>
+        <p>© 2026 College Complaints. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-note">
+
+    </div>
+  </footer>
+</body>
+
+</html>

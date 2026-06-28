@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty | College Complaints</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+  <script src="public/js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">College Complaints</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="teachers.html">Subject Teachers</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="surroundings.html">Campus</a>
+      <a href="complant.html">Complaint</a>
+      <a href="admin-login.html">Login</a>
+
+    </nav>
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <main class="page-shell">
+
+
+    <section class="card-glass" style="margin-bottom: 1rem;">
+      <div class="search-bar">
+        <input type="search" id="rosterSearch" placeholder="Search faculty by name, role, or description..." />
+        <div class="roster-filter-pills filter-buttons">
+          <button type="button" class="active" data-filter="All">All</button>
+          <button type="button" data-filter="leadership">Leadership</button>
+          <button type="button" data-filter="staff">Support Staff</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="list-grid" id="profilesGrid" data-profile-page="faculty"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <strong>College Complaints</strong>
+        <p>staff,hostel,campus feedback platform.</p>
+      </div>
+      <div>
+        <strong>Resources</strong>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teachers.html">Subject Teachers</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="surroundings.html">Campus Environment</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Legal & Policy</strong>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Made by</strong>
+        <p class="footer-author">Shreyas Kulkarni</p>
+        <p>© 2026 College Complaints. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-note">
+
+    </div>
+  </footer>
+</body>
+
+</html>

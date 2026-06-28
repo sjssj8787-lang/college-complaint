@@ -1,0 +1,159 @@
+{
+  "admin": {
+    "id": "shreyas",
+    "password": "shreyas123"
+  },
+  "students": [
+    {
+      "usn": "1MS17CS001",
+      "password": "password"
+    },
+    {
+      "usn": "1MS17CS002",
+      "password": "password"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "P-1782575997837",
+      "role": "Public",
+      "owner": "Anonymous",
+      "platform": "College",
+      "type": "Complaint",
+      "target": "Subject Teacher: Teacher 2",
+      "subject": "Verification Test 2",
+      "message": "This is a verification test for Teacher 2.",
+      "resolved": false,
+      "status": "Open",
+      "date": "6/27/2026, 9:29:57 PM"
+    },
+    {
+      "id": "P-1782575877734",
+      "role": "Public",
+      "owner": "Anonymous",
+      "platform": "College",
+      "type": "Complaint",
+      "target": "Subject Teacher: Teacher 1",
+      "subject": "Verification Test 1",
+      "message": "This is a verification test for Teacher 1.",
+      "resolved": false,
+      "status": "Open",
+      "date": "6/27/2026, 9:27:57 PM"
+    },
+    {
+      "id": "P-1782574213325",
+      "role": "Public",
+      "owner": "Anonymous",
+      "platform": "College",
+      "type": "Complaint",
+      "target": "Subject Teacher: Teacher 2",
+      "subject": "Teacher 2 Test Subject",
+      "message": "This is a test complaint about Teacher 2's class.",
+      "resolved": false,
+      "status": "Open",
+      "date": "6/27/2026, 9:00:13 PM"
+    }
+  ],
+  "profiles": {
+    "faculty": [
+      {
+        "id": "faculty-1",
+        "name": "Faculty 1",
+        "initials": "F1",
+        "role": "Principal",
+        "description": "Leadership & Strategy",
+        "photo": "photos/faculty1.png"
+      },
+      {
+        "id": "faculty-2",
+        "name": "Faculty 2",
+        "initials": "F2",
+        "role": "Dean",
+        "description": "Academic Affairs",
+        "photo": "photos/faculty2.png"
+      },
+      {
+        "id": "faculty-3",
+        "name": "Faculty 3",
+        "initials": "F3",
+        "role": "HOD, Engineering",
+        "description": "Department leadership and course strategy",
+        "photo": "photos/faculty1.png"
+      },
+      {
+        "id": "faculty-4",
+        "name": "Faculty 4",
+        "initials": "F4",
+        "role": "Physical Education",
+        "description": "Health, fitness and sports coordination",
+        "photo": "photos/faculty2.png"
+      },
+      {
+        "id": "faculty-5",
+        "name": "Faculty 5",
+        "initials": "F5",
+        "role": "Librarian",
+        "description": "Resource services and student support",
+        "photo": "photos/faculty1.png"
+      },
+      {
+        "id": "faculty-6",
+        "name": "Faculty 6",
+        "initials": "F6",
+        "role": "Student Affairs",
+        "description": "Campus experience and student engagement",
+        "photo": "photos/faculty2.png"
+      }
+    ],
+    "teachers": [
+      {
+        "id": "teacher-1",
+        "name": "Teacher 1",
+        "initials": "T1",
+        "role": "Mathematics",
+        "description": "Curriculum planning and exam guidance",
+        "photo": "photos/teacher1.png"
+      },
+      {
+        "id": "teacher-2",
+        "name": "Teacher 2",
+        "initials": "T2",
+        "role": "Physics",
+        "description": "Lab mentoring and concept clarity",
+        "photo": "photos/teacher2.png"
+      },
+      {
+        "id": "teacher-3",
+        "name": "Teacher 3",
+        "initials": "T3",
+        "role": "Chemistry",
+        "description": "Practical chemistry support and assessment",
+        "photo": "photos/teacher1.png"
+      },
+      {
+        "id": "teacher-4",
+        "name": "Teacher 4",
+        "initials": "T4",
+        "role": "Computer Science",
+        "description": "Technology projects and coding practice",
+        "photo": "photos/teacher2.png"
+      },
+      {
+        "id": "teacher-5",
+        "name": "Teacher 5",
+        "initials": "T5",
+        "role": "Electronics",
+        "description": "Hands-on circuits and systems learning",
+        "photo": "photos/teacher1.png"
+      },
+      {
+        "id": "teacher-6",
+        "name": "Teacher 6",
+        "initials": "T6",
+        "role": "English",
+        "description": "Communication skills and literature support",
+        "photo": "photos/teacher2.png"
+      }
+    ]
+  }
+}

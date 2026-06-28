@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal | College Complaints</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+  <script>
+    // Prevent unauthenticated flashes
+    const user = sessionStorage.getItem('loggedInUser');
+    if (!user || user === 'admin') {
+      window.location.href = 'admin-login.html';
+    }
+  </script>
+  <script src="public/js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">College Complaints</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="teachers.html">Subject Teachers</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="surroundings.html">Campus</a>
+      <a href="complant.html">Complaint</a>
+      <a href="admin-login.html">Sign In / Register</a>
+    </nav>
+    <div class="button-group" style="align-items: center;">
+      <span class="muted-text" id="studentWelcomeUsn" style="font-weight: 600; font-size: 0.9rem;"></span>
+      <button class="button secondary small" onclick="logout()">Logout</button>
+      <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Welcome banner -->
+    <section class="section-heading card-glass">
+      <p class="eyebrow">Student Portal</p>
+      <h1>Submit & Track Complaints</h1>
+      <p>Submit your concerns directly to campus administration and monitor their investigation and resolution progress
+        in real-time.</p>
+    </section>
+
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: start;">
+
+      <!-- Submission Form -->
+      <section class="form-panel card-glass">
+        <h2>Submit Feedback or Complaint</h2>
+        <form id="studentReportForm" onsubmit="handleStudentSubmit(event)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;">
+            <div class="form-group">
+              <label for="studentType">Type</label>
+              <select id="studentType" required>
+                <option value="Complaint">Complaint</option>
+                <option value="Feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="studentTarget">Category</label>
+              <select id="studentTarget" required>
+                <option value="">Choose category</option>
+                <option value="Faculty">Faculty & Academics</option>
+                <option value="Subject Teacher">Subject Teacher</option>
+                <option value="Hostel">Hostel & Mess</option>
+                <option value="Campus">Campus & Facilities</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="studentTargetDetailContainer" class="form-group" style="display: none; margin-top: 1rem;">
+            <label id="studentTargetDetailLabel">Select Detail</label>
+            <select id="studentTargetDetail" disabled></select>
+          </div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="studentSubject">Subject</label>
+            <input type="text" id="studentSubject" placeholder="Enter brief subject" required />
+          </div>
+
+          <div class="form-group" style="margin-top: 1rem;">
+            <label for="studentMessage">Details</label>
+            <textarea id="studentMessage" placeholder="Describe the issue or feedback in detail" required></textarea>
+          </div>
+
+          <div class="form-actions" style="margin-top: 1.5rem;">
+            <button type="submit" class="button primary">Submit Request</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- History and Status Timeline -->
+      <section class="card-glass">
+        <h2>Your Submission History</h2>
+        <p class="muted-text" style="margin-bottom: 1.5rem;">Track real-time status pipelines of your submitted items.
+        </p>
+        <div id="studentHistory" class="history-list">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <strong>College Complaints</strong>
+        <p>staff,hostel,campus feedback platform.</p>
+      </div>
+      <div>
+        <strong>Resources</strong>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teachers.html">Subject Teachers</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="surroundings.html">Campus Environment</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Legal & Policy</strong>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Made by</strong>
+        <p class="footer-author">Shreyas Kulkarni</p>
+        <p>© 2026 College Complaints. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-note">
+      
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = sessionStorage.getItem('loggedInUser');
+      if (user) {
+        const welcome = document.getElementById('studentWelcomeUsn');
+        if (welcome) welcome.textContent = `USN: ${user}`;
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | College Complaints</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+  <script src="public/js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">College Complaints</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="teachers.html">Subject Teachers</a>
+      <a href="faculty.html">Faculty</a>
+      <a href="surroundings.html">Campus</a>
+      <a href="complant.html">Complaint</a>
+      <a href="admin-login.html">Login</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <main class="page-shell">
+
+    <!-- Role Switcher -->
+    <section class="dashboard-tabs card-glass" style="margin-bottom: 0.5rem; padding: 1rem 1.5rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+      <div>
+        <p class="eyebrow" style="margin: 0 0 0.15rem 0;">Identity Type</p>
+        <h3 style="margin: 0; font-size: 1.15rem;">Select your role</h3>
+      </div>
+      <div class="tab-buttons" style="margin-bottom: 0;">
+        <button id="studentTabBtn" class="tab-button active" onclick="switchLoginView('student')">Student Login</button>
+        <button id="adminTabBtn" class="tab-button" onclick="switchLoginView('admin')">Admin Login</button>
+      </div>
+    </section>
+
+    <!-- Student Login Panel -->
+    <section class="form-panel card-glass" id="studentLoginSection">
+      <form id="studentLoginForm" onsubmit="handleStudentLogin(event)">
+        <div class="form-group">
+          <label for="studentLoginUsn">USN (Student ID)</label>
+          <input type="text" id="studentLoginUsn" placeholder="e.g., 1MS17CS001" required />
+        </div>
+        <div class="form-group" style="margin-top: 1rem;">
+          <label for="studentLoginPassword">Password</label>
+          <input type="password" id="studentLoginPassword" placeholder="Enter password" required />
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <button type="submit" class="button primary">Login as Student</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Admin Login Panel -->
+    <section class="form-panel card-glass" id="adminLoginSection" style="display: none;">
+      <form id="adminLoginForm" onsubmit="handleAdminLogin(event)">
+        <div class="form-group">
+          <label for="adminLoginId">Admin ID</label>
+          <input type="text" id="adminLoginId" placeholder="Enter admin id" required />
+        </div>
+        <div class="form-group" style="margin-top: 1rem;">
+          <label for="adminLoginPassword">Password</label>
+          <input type="password" id="adminLoginPassword" placeholder="Enter password" required />
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <button type="submit" class="button primary">Login as Admin</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    function switchLoginView(role) {
+      const studentTab = document.getElementById('studentTabBtn');
+      const adminTab = document.getElementById('adminTabBtn');
+      const studentSec = document.getElementById('studentLoginSection');
+      const adminSec = document.getElementById('adminLoginSection');
+
+      if (role === 'student') {
+        studentTab.classList.add('active');
+        adminTab.classList.remove('active');
+        studentSec.style.display = 'block';
+        adminSec.style.display = 'none';
+      } else {
+        studentTab.classList.remove('active');
+        adminTab.classList.add('active');
+        studentSec.style.display = 'none';
+        adminSec.style.display = 'block';
+      }
+    }
+  </script>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <strong>College Complaints</strong>
+        <p>staff,hostel,campus feedback platform.</p>
+      </div>
+      <div>
+        <strong>Resources</strong>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="teachers.html">Subject Teachers</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="surroundings.html">Campus Environment</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Legal & Policy</strong>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Made by</strong>
+        <p class="footer-author">Shreyas Kulkarni</p>
+        <p>© 2026 College Complaints. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-note">
+      
+    </div>
+  </footer>
+</body>
+</html>
